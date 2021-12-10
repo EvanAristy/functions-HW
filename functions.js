@@ -117,19 +117,20 @@ console.log(findLongestWord(arr));
 8. Write a function filterLongWords that takes an array of words and a number i and returns the array of words that are longer than i characters long.
 */
 
-let words = ['Hi', 'Hola', 'Hello', 'Hey', 'Yoooo']
-let longWords = []
-let x = 4
-filterLongWords = (words) => {
+
+
+
+filterLongWords = (arr, num) => {
   // ADD YOUR CODE HERE
-  for (let i = 0; i<words.length; i++){
-    if(words[i] > x){
-      longWords.push(words[i]);
+  let longWords =[]
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i].length > num){
+      longWords.push(arr[i]);
     }
     
   }  
-  console.log(longWords)
+  return longWords;
 };
 
 
-console.log(filterLongWords(words));
+console.log(filterLongWords(["Hi", "Hola", "Hey", "Hello", "Yooooooo"], 4))
